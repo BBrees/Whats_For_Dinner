@@ -27,9 +27,12 @@ def Restaurants():
     
     dinner = random.choice(businesses)
 
+    keys = ['name', 'location']
+    values = list(map(dinner.get, keys))
+
     #return for Restaurant function
 
-    return dinner
+    return values
 
 Whats_For_Dinner = Restaurants()
 
