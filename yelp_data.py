@@ -16,14 +16,14 @@ def Restaurants():
 
     params = {}
     
-    #input function call twice in order to build dictionary
     params['term'] = input("What kind of food would you like for dinner?\n")
     params['location'] = input("Where do you want to eat?\n")
 
-#Utilizing dictionary to filter requests to yelp api
+#Utilizing dictionary to filter requests to yelp api to obtain json file
     req = requests.get(url, params=params, headers=headers)
     parsed = json.loads(req.text)
     businesses = parsed["businesses"]
+
     
     dinner = random.choice(businesses)
 
