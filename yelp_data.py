@@ -3,7 +3,7 @@ import requests
 import json
 import random
 
-api_key = "wWo4R0IdYfTs35U8WcJvA1azDCVbGPVEx3POlFUUbTHNwkjQAMiA7kRUusiCOR4GJoP9WIYM1B8n_YTA6BFHcKepDcmPGvVUXPGznLZjZ9iW82Oubgss5tnFFmJ3YXYx"
+api_key = "SECRET_TOKEN"
 headers = {'Authorization': 'Bearer %s' % api_key}
 
 url = "https://api.yelp.com/v3/businesses/search"
