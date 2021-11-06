@@ -1,25 +1,20 @@
 import requests
+
 import json
 import random
 
-#connect to external api
-api_key = "SECRET_TOKEN"
+api_key = "wWo4R0IdYfTs35U8WcJvA1azDCVbGPVEx3POlFUUbTHNwkjQAMiA7kRUusiCOR4GJoP9WIYM1B8n_YTA6BFHcKepDcmPGvVUXPGznLZjZ9iW82Oubgss5tnFFmJ3YXYx"
 headers = {'Authorization': 'Bearer %s' % api_key}
 
 url = "https://api.yelp.com/v3/businesses/search"
 
-#type of food and location in louisville 
-
 def Restaurants():
-
-#Create a dictionary or list, populate it with several values, retrieve at least one to use in your program
 
     params = {}
     
     params['term'] = input("What kind of food would you like for dinner?\n")
     params['location'] = input("Where do you want to eat?\n")
 
-#Utilizing dictionary to filter requests to yelp api to obtain json file
     req = requests.get(url, params=params, headers=headers)
     parsed = json.loads(req.text)
     businesses = parsed["businesses"]
@@ -27,16 +22,14 @@ def Restaurants():
     
     dinner = random.choice(businesses)
 
-    keys = ['name', 'location']
-    values = list(map(dinner.get, keys))
+    dinner_name = dinner.get('name')
+    dinner_address = dinner.get('location',{}).get('display_address'))
 
-    #return for Restaurant function
+    Eat_At = dinner_name, dinner_address
 
-    return values
+    return Eat_At
 
 Whats_For_Dinner = Restaurants()
-
-#print function utilized to display return of Restaurant function
 
 print (Whats_For_Dinner)
 
