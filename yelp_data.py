@@ -8,28 +8,42 @@ headers = {'Authorization': 'Bearer %s' % api_key}
 
 url = "https://api.yelp.com/v3/businesses/search"
 
-def Restaurants():
+params = {}
+params['term'] = input("What kind of food would you like for dinner?\n")
+params['location'] = input("Where do you want to eat?\n")
 
-    params = {}
+req = requests.get(url, params=params, headers=headers)
+parsed = json.loads(req.text)
+businesses = parsed["businesses"]
+
+dinner_choice = random.choice(businesses)        
+
+def dinner_name():
+
+    Restaurant_Name = dinner_choice.get('name')
     
-    params['term'] = input("What kind of food would you like for dinner?\n")
-    params['location'] = input("Where do you want to eat?\n")
+    return Restaurant_Name
 
-    req = requests.get(url, params=params, headers=headers)
-    parsed = json.loads(req.text)
-    businesses = parsed["businesses"]
+def dinner_location():
 
-    
-    dinner = random.choice(businesses)
+    Restaurant_Location = dinner_choice.get('location', {}).get('display_address')
 
-    dinner_name = dinner.get('name')
-    dinner_address = dinner.get('location',{}).get('display_address'))
+    return Restaurant_Location
 
-    Eat_At = dinner_name, dinner_address
+def dinner_url():
 
-    return Eat_At
+    Restaurant_url = dinner_choice.get('url')
 
-Whats_For_Dinner = Restaurants()
+    return Restaurant_url
 
-print (Whats_For_Dinner)
+Dinner_One = dinner_name()
+Dinner_Two = dinner_location()
 
+print (Dinner_One)
+print (Dinner_Two)
+
+print("Would you like more information?\n")
+more_information = input("'y' for yes or 'n' for no.")
+
+if more_information == 'y':
+    webbrowser.open_new(dinner_url())
