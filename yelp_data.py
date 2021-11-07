@@ -59,7 +59,7 @@ print ("Address:", Dinner_Two)
 
 # if user would like to get more information press y and the yelp url for the restaurant with open in browser;
 # press n and the program will end
-print("Would you like more information?\n")
+print("Would you like more information?")
 more_information = input("'y' for yes or 'n' for no.\n")
 
 if more_information == 'y':

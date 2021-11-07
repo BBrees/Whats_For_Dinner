@@ -1,8 +1,8 @@
 ﻿# Whats_For_Dinner
 
-About
+ABOUT
 
-Do you ever have trouble deciding which restaurants to go to? Does it every cause marital arguments or make you miss the window of opportunity? This is the app for you. Utilizing Python and the Yelp API you can find a place in seconds. 
+Do you ever have trouble deciding which restaurants to go to? Does it every cause marital strife or make you miss the window of opportunity? This is the app for you. Utilizing Python and the Yelp API you can find a place in seconds. 
 
 REQUIREMENTS
 
