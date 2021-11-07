@@ -51,12 +51,22 @@ If you want more information press y, will open html yelp page for restaurant in
 ## FEATURES FOR CODE LOUISVILLE PROJECT
 
 1. Create a dictionary or list, populate with several values, retrieve at least one and use it in your program. 
+
 2. Read data from an external file, such as text, json, csv, etc and use that data in your application.
-3. Connect to external/3rd party API and read data into your app
+
+3. Connect to external/3rd party API and read data into your app.
+
+4. Create and call at least 3 functions or methods, at least one of which must return a value that is used somewhere else in your code. To clarify, at least one function should be called in your code, that function should calculate, retrieve, or otherwise set the value of a variable or data structure, return a value to where it was called, and use that value somewhere else in your code.
 
 ## ADDITIONAL FEATURES TO ADD
 
 1. Error handling for invalid inputs
-2. Master loop so that if user does not like the current randomized restaurant they can go back through the program without restarting entirely.
-3. Pull up map for directions. 
+
+2. Print 'display_address' rather than all 'location' from dinner_choice (done) 
+
+3. Master loop so that if user does not like the current randomized restaurant they can go back through the program without restarting entirely.
+
+4. Pull up map for directions. 
+
+5. Transfer to site to order food directly
 
