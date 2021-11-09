@@ -68,5 +68,7 @@ If you want more information press y, will open html yelp page for restaurant in
 
 4. Pull up map for directions. 
 
-5. Transfer to site to order food directly
+5. Allow option to only select for currently open restaurants
+
+6. Transfer to site to order food directly
 
