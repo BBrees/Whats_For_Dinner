@@ -11,7 +11,6 @@ import webbrowser
 # and imported or copied in as a string to the commented out variable api_key = "SECRET_TOKEN"
 
 from api import api_key
-
  
 # api_key = "SECRET_TOKEN"
 
