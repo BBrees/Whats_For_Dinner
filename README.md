@@ -16,15 +16,17 @@ In order to connect externally to the Yelp API an individual API key is required
     
 2. Scroll to the bottom of the page and click on developers
 
-3. Click the first link to Yelp Fusion 
+3. Click the first link to Yelp Fusion
 
-4. Click create app & fill form 
+4. Click Explore Yelp Fusion
 
-5. Click manage app to obtain API key 
+5. Click create app & fill form 
 
-6. Open `yelp_data.py` in VS Code
+6. Click manage app to obtain API key 
 
-7. Copy key in api_key variable or create new file api.py
+7. Open `yelp_data.py` in VS Code
+
+8. Copy key in api_key variable or create new file api.py
 
     `api_key = "SECRET_TOKEN" #Replace SECRET_TOKEN, ensure API is str`
 
