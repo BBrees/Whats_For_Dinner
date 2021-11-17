@@ -26,7 +26,7 @@ In order to connect externally to the Yelp API an individual API key is required
 
 7. Open `yelp_data.py` in VS Code
 
-8. Copy key in api_key variable or create new file api.py
+8. Copy key into `api.py` api_key variable
 
     `api_key = "SECRET_TOKEN" #Replace SECRET_TOKEN, ensure API is str`
 
