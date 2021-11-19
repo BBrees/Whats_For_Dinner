@@ -4,6 +4,8 @@ import json
 import random
 import webbrowser
 
+from api import api_key
+
 class Dinner():
     def __init__(self, name, location):
         self.name = dinner_choice.get('name')
@@ -14,8 +16,7 @@ class Dinner():
             print("Name =", self.name)
             print("Address =", self.location)
             #print("var3 =", self.var3)
-            
-api_key = "wWo4R0IdYfTs35U8WcJvA1azDCVbGPVEx3POlFUUbTHNwkjQAMiA7kRUusiCOR4GJoP9WIYM1B8n_YTA6BFHcKepDcmPGvVUXPGznLZjZ9iW82Oubgss5tnFFmJ3YXYx"
+
 headers = {'Authorization': 'Bearer %s' % api_key}
 
 url = "https://api.yelp.com/v3/businesses/search"
