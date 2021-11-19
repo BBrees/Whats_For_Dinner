@@ -8,11 +8,10 @@ import webbrowser
 
 # API key from YELP saved in untracked file; personal API key can be obtained from 
 # - https://www.yelp.com/developers/documentation/v3/get_started. API key can be placed in separate file
-# and imported or copied in as a string to the commented out variable api_key = "SECRET_TOKEN"
+# and imported
 
 from api import api_key
  
-# api_key = "SECRET_TOKEN"
 
 # Authorization of API key to allow url to be accessed
 headers = {'Authorization': 'Bearer %s' % api_key}
@@ -35,26 +34,24 @@ businesses = parsed["businesses"]
 # utilizing random package a single business is returned from the json file
 dinner_choice = random.choice(businesses)        
 
-# Dinner class of functions to make dinner_choice more user readable when printed in console
-class Dinner:
-    def dinner_name():
-        Restaurant_Name = dinner_choice.get('name')
-        return Restaurant_Name
+def dinner_name():
+    Restaurant_Name = dinner_choice.get('name')
+    return Restaurant_Name
 
-    def dinner_location():
-        Restaurant_Location = dinner_choice.get('location', {}).get('display_address')
-        return Restaurant_Location
+def dinner_location():
+    Restaurant_Location = dinner_choice.get('location', {}).get('display_address')
+    return Restaurant_Location
 
-    def dinner_url():
-        Restaurant_url = dinner_choice.get('url')
-        return Restaurant_url
+def dinner_url():
+    Restaurant_url = dinner_choice.get('url')
+    return Restaurant_url
 
-Dinner_One = Dinner.dinner_name()
-Dinner_Two = Dinner.dinner_location()
+Dinner_One = dinner_name()
+Dinner_Two = dinner_location()
 
 # in terminal user views name of restaurant and display address
-print ("Name:", Dinner_One)
-print ("Address:", Dinner_Two)
+print ("Name: ", Dinner_One)
+print ("Address: ", Dinner_Two)
 
 # if user would like to get more information press y and the yelp url for the restaurant with open in browser;
 # press n and the program will end
@@ -62,6 +59,6 @@ print("Would you like more information?")
 more_information = input("'y' for yes or 'n' for no.\n")
 
 if more_information == 'y':
-    webbrowser.open_new(Dinner.dinner_url())
+    webbrowser.open_new(dinner_url())
 else:
     pass
